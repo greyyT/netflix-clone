@@ -2,6 +2,7 @@ import useBillboard from '@/hooks/useBillboard';
 import React from 'react';
 
 import { AiOutlineInfoCircle } from 'react-icons/ai';
+import PlayButton from './PlayButton';
 
 const Billboard: React.FC = (): JSX.Element => {
   const { data } = useBillboard();
@@ -23,6 +24,7 @@ const Billboard: React.FC = (): JSX.Element => {
           {data?.description}
         </p>
         <div className="flex items-center mt-3 md:mt-4 gap-3">
+          <PlayButton movieId={data?.id} />
           <button
             className="
             bg-white bg-opacity-30 hover:bg-opacity-20
@@ -36,7 +38,7 @@ const Billboard: React.FC = (): JSX.Element => {
             transition
             "
           >
-            <AiOutlineInfoCircle className="mr-1" />
+            <AiOutlineInfoCircle size={25} className="mr-1" />
             More Info
           </button>
         </div>
