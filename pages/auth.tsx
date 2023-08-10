@@ -1,6 +1,6 @@
 import Input from '@/components/Input';
 import axios from 'axios';
-import { useCallback, useState } from 'react';
+import { useCallback, useEffect, useState } from 'react';
 import { getSession, signIn } from 'next-auth/react';
 
 import { FcGoogle } from 'react-icons/fc';
@@ -34,6 +34,14 @@ const Auth: React.FC = (): JSX.Element => {
   const toggleVariant = useCallback(() => {
     setVariant((currentVariant: string) => (currentVariant === 'login' ? 'register' : 'login'));
   }, []);
+
+  useEffect(() => {
+    if (variant === 'login') {
+      document.title = 'Login';
+    } else {
+      document.title = 'Register';
+    }
+  }, [variant]);
 
   const login = useCallback(async () => {
     try {
