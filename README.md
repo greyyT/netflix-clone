@@ -35,6 +35,7 @@ npm install
 
 ```ini
 DATABASE_URL=YOUR_DATABASE_URL # for example: postgres://postgres:postgres@localhost:5432/netflix
+NEXTAUTH_URL=http://localhost:3000 # this only needed for development purposes
 NEXTAUTH_JWT_SECRET=YOUR_JWT_SECRET
 NEXTAUTH_SECRET=YOUR_NEXTAUTH_SECRET
 
@@ -66,19 +67,27 @@ For development purposes, you can run the following command:
 npm run dev
 ```
 
-## Tech Stacks
+## Tech Stack
 
-<p align="center">
-<a href="https://nextjs.org/" target='_blank'>
-<img height=50 src="https://static-00.iconduck.com/assets.00/next-js-icon-512x512-zuauazrk.png">
-</a>
-<a href="https://next-auth.js.org/getting-started/example">
-<img height=50 src="https://next-auth.js.org/img/logo/logo-sm.png">
-</a>
-<a href="https://www.prisma.io/">
-<img height=50 src="https://static-00.iconduck.com/assets.00/prisma-icon-423x512-isxs6996.png">
-</a>
-<img height=50 src="https://axios-http.com/assets/logo.svg">
-<img height=50 src="https://static-00.iconduck.com/assets.00/tailwind-css-icon-2048x1229-u8dzt4uh.png">
-<img height=50 src="https://repository-images.githubusercontent.com/218115303/d5e0ba80-f99c-11e9-84a1-1a0aea770883">
-</p>
+- [NextJS](https://nextjs.org/)
+- [TypeScript](https://www.typescriptlang.org/)
+- [Next Auth](https://next-auth.js.org/)
+- [Tailwind CSS](https://tailwindcss.com/)
+- [MongoDB](https://www.mongodb.com/)
+- [Lodash](https://lodash.com/)
+- [Axios](https://axios-http.com/)
+- [SWR](https://swr.vercel.app/)
+- [Zustand](https://zustand.surge.sh/)
+- [Bcrypt](https://www.npmjs.com/package/bcrypt)
+- [Prisma](https://www.prisma.io/)
+
+## Features
+
+- Full responsive on all pages
+- Authentication with Google, Github and NextAuth
+- Authentication based on cookies
+- Protected routes (only authenticated users can access)
+- Playing random movie on home page
+- More info box for previewing movies
+- Add/remove movies to/from your list
+- Play full movie
