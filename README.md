@@ -33,7 +33,7 @@ npm install
 
 3. Create a `.env` file in the root directory of the project and add the following environment variables:
 
-```sh
+```ini
 DATABASE_URL=YOUR_DATABASE_URL # for example: postgres://postgres:postgres@localhost:5432/netflix
 NEXTAUTH_JWT_SECRET=YOUR_JWT_SECRET
 NEXTAUTH_SECRET=YOUR_NEXTAUTH_SECRET
@@ -65,3 +65,20 @@ For development purposes, you can run the following command:
 ```sh
 npm run dev
 ```
+
+## Tech Stacks
+
+<p align="center">
+<a href="https://nextjs.org/">
+<img height=50 src="https://static-00.iconduck.com/assets.00/next-js-icon-512x512-zuauazrk.png">
+</a>
+<a href="https://next-auth.js.org/getting-started/example">
+<img height=50 src="https://next-auth.js.org/img/logo/logo-sm.png">
+</a>
+<a href="https://www.prisma.io/">
+<img height=50 src="https://static-00.iconduck.com/assets.00/prisma-icon-423x512-isxs6996.png">
+</a>
+<img height=50 src="https://axios-http.com/assets/logo.svg">
+<img height=50 src="https://static-00.iconduck.com/assets.00/tailwind-css-icon-2048x1229-u8dzt4uh.png">
+<img height=50 src="https://repository-images.githubusercontent.com/218115303/d5e0ba80-f99c-11e9-84a1-1a0aea770883">
+</p>
