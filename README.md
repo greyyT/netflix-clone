@@ -69,7 +69,7 @@ npm run dev
 ## Tech Stacks
 
 <p align="center">
-<a href="https://nextjs.org/" rel='_blank'>
+<a href="https://nextjs.org/" target='_blank'>
 <img height=50 src="https://static-00.iconduck.com/assets.00/next-js-icon-512x512-zuauazrk.png">
 </a>
 <a href="https://next-auth.js.org/getting-started/example">
