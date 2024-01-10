@@ -22,6 +22,8 @@ model User {
   favoriteIds String[] @db.ObjectId
   sessions Session[]
   accounts Account[]
+  suggestions Suggestions[]
+  watchedMovies WatchedMovie[]
 }
 
 model Account {
@@ -66,8 +68,34 @@ model Movie {
   id String @id @default(auto()) @map("_id") @db.ObjectId
   title String
   description String
-  videoUrl String
+  videoUrl String?
   thumbnailUrl String
   genre String
   duration String
+}
+
+model Suggestions {
+  id String @id @default(auto()) @map("_id") @db.ObjectId
+  movieId String @db.ObjectId
+  userId String @db.ObjectId
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  movies String[] @db.ObjectId
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@unique([movieId, userId])
+}
+
+model WatchedMovie {
+  id String @id @default(auto()) @map("_id") @db.ObjectId
+  movieId String @db.ObjectId
+  userId String @db.ObjectId
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@unique([movieId, userId])
 }

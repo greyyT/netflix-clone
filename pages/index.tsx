@@ -1,3 +1,4 @@
+import AllMovies from '@/components/AllMovies';
 import Billboard from '@/components/Billboard';
 import InfoModal from '@/components/InfoModal';
 import MovieList from '@/components/MoveList';
@@ -42,6 +43,7 @@ export default function Home() {
       <div className="pb-40">
         <MovieList title="Trending Now" data={movies} />
         <MovieList title="My List" data={favorites} />
+        <AllMovies />
       </div>
     </>
   );
